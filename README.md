@@ -63,9 +63,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - All fields correctly typed and categorized.
   - 11 outliers in `Number_of_Records` retained to maintain data integrity.
 
-📷 **Add Image**:  
-`/images/databrew-profiling.png`  
-**Caption**: _Glue DataBrew profiling summary showing field distribution and quality_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/S3_raw_bucket.png)
+**Figure-6**: _data_profiling_
 
 #### Data Cleaning
 - **Transformations Applied**:
