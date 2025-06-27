@@ -174,103 +174,165 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-system.png)
 **Figure-14**: _s3-curated-system_
 
+---
 
+# Module 1: AWS Deployment and Service Models
 
-# AWS Case Studies Summary
+## Case Study 1: Traditional vs. Cloud Computing
 
-## Module 1: AWS Deployment and Service Models
+This case study examines the architectural, security, and operational contrasts between traditional computing and cloud-based computing using AWS in a financial operations setting.
 
-### Case Study 1: Traditional vs. Cloud Computing
-**Scenario:** Comparison of financial operations infrastructure  
-**Key Points:**
-- Traditional: On-site servers, VPN access, physical security  
-- AWS Cloud: IAM access controls, global availability, encryption  
-**Conclusion:** AWS provides better flexibility and compliance for finance operations  
+In the traditional model, data is stored in on-site servers, providing tight physical control but poor global accessibility. Data access is limited to on-premises networks or VPNs, making it less efficient in distributed work environments. Security in this model heavily relies on physical barriers and internal governance policies.
 
-### Case Study 2: Cloud Deployment Models
-**Organization:** University Canada West (UCW)  
-**Models Implemented:**
-1. Private Cloud: For confidential data isolation  
-2. Public Cloud: Scalable general operations  
-3. Hybrid Cloud: Legacy system transition  
-4. Multi-Cloud: Resilience through provider diversity  
-**Conclusion:** Tailored deployments enhance security and agility  
+In contrast, AWS cloud computing decentralizes data while maintaining security through identity-based access and encryption protocols. IAM (Identity and Access Management) allows finely-tuned access control. AWS provides encryption both at rest and in transit, bolstering privacy.
 
-### Case Study 3: Cloud Service Models
-**UCW Finance Department Use Cases:**
-- **IaaS (EC2):** Full infrastructure control  
-- **PaaS (Elastic Beanstalk):** Rapid app deployment  
-- **SaaS (QuickSight):** Instant analytics tools  
-**Conclusion:** Balanced approach optimizes control vs convenience  
+Key Observations:
 
-## Module 2: AWS Cost Analysis
+- Location: Traditional systems tie data to one physical place; AWS uses availability zones and regions.
+- Access: Traditional = limited to local/VPN; Cloud = global, secure, role-based access.
+- Security: Traditional relies on hardware; AWS provides encryption, IAM, and policies.
 
-### Case Study 4: Total Cost of Ownership (TCO)
-**Company:** Delaware North  
-**Migration Strategy:**
-- Piloted 50 non-critical functions  
-- Used EC2 Reserved Instances  
-- Automated patching with Systems Manager  
-- Centralized billing via AWS Organizations  
-**Outcome:** Reduced maintenance/hardware costs by 60%  
+Conclusion: For finance operations requiring flexibility, availability, and compliance, AWS cloud infrastructure delivers significant operational advantages.
 
-### Case Study 5: AWS Pricing Calculator
-**Project:** UCW Data Pipeline Cost Estimation  
-**Services Analyzed:**
-- S3 Storage  
-- Glue ETL Jobs  
-- Athena Analytics  
-**Key Factors:** Usage-based pricing, Free Tier, Reserved Capacity  
-**Result:** Accurate budget forecasting achieved  
+## Case Study 2: Cloud Deployment Models
 
-## Module 3: AWS Global Infrastructure
+This case study explores how University Canada West (UCW) implements different AWS deployment models—Private, Public, Hybrid, and Multi-cloud—to support financial operations securely and efficiently.
 
-### Case Study 7: Global Architecture
-**UCW Student Finance System:**
-- **Regions:** N. Virginia & Oregon  
-- **Services:** EC2, EBS, CloudFront  
-- **Security:** TLS + Signed URLs  
-**Improvement:** 40% faster student access globally  
+Private Cloud is used for confidential datasets, ensuring control and compliance by maintaining local isolation.
 
-## Module 4: AWS IAM
+Public Cloud enables quick scaling and cost efficiency for general-purpose financial operations.
 
-### Case Study 8: Shared Responsibility Model
-**Division:**
-- **AWS:** Physical infrastructure/network  
-- **User:** OS patches, IAM, encryption  
-**Critical Success Factor:** Proper user configuration  
+Hybrid Cloud integrates traditional and cloud environments to gradually transition legacy systems.
 
-### Case Study 9: IAM Practice Lab
-**Activities:**
-- Created granular user groups  
-- Implemented least privilege policies  
-- Tested real-world access scenarios  
-**Outcome:** Demonstrated role-based security effectiveness  
+Multi-Cloud leverages services from multiple providers, increasing system resilience and flexibility.
 
-## Module 5: AWS VPC
+Conclusion: UCW's approach demonstrates how tailoring deployment models enhances both data security and service agility.
 
-### Case Study 10: VPC Lab
-**Built:**
-- Public/Private subnets across 2 AZs  
-- Internet & NAT Gateways  
-- EC2 with HTTP access  
-**Takeaway:** Secure isolation with controlled internet access  
+## Case Study 3: Cloud Service Models (IaaS, PaaS, SaaS)
 
-## Module 6: AWS Lambda
+This study analyzes the use of AWS's core service models at UCW to address different requirements of the finance department.
 
-### Case Study 11: Serverless Automation
-**Function:** Scheduled EC2 stopper  
-**Components:**
-- Python 3.11 runtime  
-- EventBridge triggers (minutely)  
-- Minimal IAM permissions  
-**Result:** 80% cost reduction for non-production instances  
+IaaS (e.g., EC2) gives full infrastructure control, suitable for hosting secure apps.
 
-## Module 7: AWS EBS
+PaaS (e.g., Elastic Beanstalk) abstracts the OS and infrastructure, allowing quick application deployment.
 
-### Case Study 12: EBS Lab
-**Tests Performed:**
-- Volume creation/mounting  
-- Snapshot backups  
-- Cross-reboot persistence  
-**Conclusion:** High-availability storage solution verified  
+SaaS (e.g., QuickSight) offers plug-and-play financial software for fast analytics.
+
+Conclusion: Each model represents a tradeoff between control and convenience. UCW uses all three to balance flexibility, scalability, and data governance.
+
+---
+
+# Module 2: AWS Cost Analysis
+
+## Case Study 4: Total Cost of Ownership (TCO)
+
+Delaware North transitioned from a legacy infrastructure to AWS to reduce costs and increase IT agility.
+
+The phased migration approach included:
+
+- Piloting 50 non-critical web functions.
+- Utilizing EC2 Reserved Instances to reduce operational expenses.
+- Implementing AWS Systems Manager to automate patching.
+- Centralizing billing via AWS Organizations.
+
+Conclusion: TCO reduction was achieved by reducing maintenance, hardware, and staffing costs. Migration helped Delaware North enhance governance and scalability.
+
+## Case Study 5: AWS Pricing Calculator
+
+UCW's finance team used AWS Pricing Calculator to estimate costs for building a cloud-based data pipeline.
+
+Pipeline services included:
+
+- Amazon S3 (storage)
+- AWS Glue (ETL jobs)
+- Amazon Athena (data analysis)
+
+The estimate factored in:
+
+- Usage-based pricing
+- Free Tier offerings
+- Reserved capacity for cost savings
+
+Conclusion: This exercise enabled realistic budget forecasts while encouraging efficient cloud usage.
+
+---
+
+# Module 3: AWS Global Infrastructure
+
+## Case Study 7: Global Architecture for Finance Operations
+
+This case demonstrates how UCW improved student financial data access through a globally distributed AWS setup.
+
+Regions used: North Virginia and Oregon
+
+Services: EC2, EBS for core workloads, and CloudFront for caching
+
+Added TLS security and signed URLs
+
+Conclusion: Students experienced faster access times and better service availability with minimal latency.
+
+---
+
+# Module 4: AWS Identity and Access Management (IAM)
+
+## Case Study 8: AWS Shared Responsibility Model
+
+The study outlines which responsibilities lie with AWS and which lie with the user:
+
+AWS: Physical infrastructure, network security
+
+User: OS patches, firewall configs, encryption, IAM policies
+
+Conclusion: Security success depends on the user's ability to configure and monitor their part of the stack.
+
+## Case Study 9: IAM Practice Lab
+
+This hands-on lab involved:
+
+- Creating users, groups, and policies
+- Applying the principle of least privilege
+- Testing real-time access
+
+Conclusion: The exercise demonstrated how IAM enforces structured, secure access based on roles.
+
+---
+
+# Module 5: AWS VPC
+
+## Case Study 10: Build Your VPC Lab
+
+This lab entailed creating a fully functional VPC with high availability:
+
+- Public and Private Subnets across 2 AZs
+- Configured Internet Gateway and NAT Gateway
+- Launched EC2 with HTTP access via Security Groups
+
+Conclusion: The lab highlighted how VPCs isolate environments while still enabling secure internet access.
+
+---
+
+# Module 6: AWS Lambda
+
+## Case Study 11: Lambda Function Automation
+
+A Lambda function was built to stop EC2 instances on a schedule:
+
+- Runtime: Python 3.11
+- Scheduled via Amazon EventBridge (every minute)
+- IAM Role defined minimal access needed
+
+Conclusion: Demonstrated serverless cost efficiency and automated resource management.
+
+---
+
+# Module 7: AWS EBS
+
+## Case Study 12: Working with Amazon EBS
+
+In this lab, EBS was tested for reliability and backup:
+
+- Created and mounted EBS volumes
+- Made snapshots and restored data
+- Demonstrated persistence across reboots
+
+Conclusion: EBS volumes offer durable, scalable storage crucial for high-availability applications.
