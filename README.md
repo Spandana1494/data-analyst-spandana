@@ -164,7 +164,7 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - ✅ Data catalog with searchable schema  
 - ✅ Documentation and detailed project report
 
-![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-user.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-c-u.png)
 **Figure-13**: _s3-curated-user_
 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-system.png)
