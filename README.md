@@ -173,3 +173,104 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-system.png)
 **Figure-14**: _s3-curated-system_
+
+
+
+# AWS Case Studies Summary
+
+## Module 1: AWS Deployment and Service Models
+
+### Case Study 1: Traditional vs. Cloud Computing
+**Scenario:** Comparison of financial operations infrastructure  
+**Key Points:**
+- Traditional: On-site servers, VPN access, physical security  
+- AWS Cloud: IAM access controls, global availability, encryption  
+**Conclusion:** AWS provides better flexibility and compliance for finance operations  
+
+### Case Study 2: Cloud Deployment Models
+**Organization:** University Canada West (UCW)  
+**Models Implemented:**
+1. Private Cloud: For confidential data isolation  
+2. Public Cloud: Scalable general operations  
+3. Hybrid Cloud: Legacy system transition  
+4. Multi-Cloud: Resilience through provider diversity  
+**Conclusion:** Tailored deployments enhance security and agility  
+
+### Case Study 3: Cloud Service Models
+**UCW Finance Department Use Cases:**
+- **IaaS (EC2):** Full infrastructure control  
+- **PaaS (Elastic Beanstalk):** Rapid app deployment  
+- **SaaS (QuickSight):** Instant analytics tools  
+**Conclusion:** Balanced approach optimizes control vs convenience  
+
+## Module 2: AWS Cost Analysis
+
+### Case Study 4: Total Cost of Ownership (TCO)
+**Company:** Delaware North  
+**Migration Strategy:**
+- Piloted 50 non-critical functions  
+- Used EC2 Reserved Instances  
+- Automated patching with Systems Manager  
+- Centralized billing via AWS Organizations  
+**Outcome:** Reduced maintenance/hardware costs by 60%  
+
+### Case Study 5: AWS Pricing Calculator
+**Project:** UCW Data Pipeline Cost Estimation  
+**Services Analyzed:**
+- S3 Storage  
+- Glue ETL Jobs  
+- Athena Analytics  
+**Key Factors:** Usage-based pricing, Free Tier, Reserved Capacity  
+**Result:** Accurate budget forecasting achieved  
+
+## Module 3: AWS Global Infrastructure
+
+### Case Study 7: Global Architecture
+**UCW Student Finance System:**
+- **Regions:** N. Virginia & Oregon  
+- **Services:** EC2, EBS, CloudFront  
+- **Security:** TLS + Signed URLs  
+**Improvement:** 40% faster student access globally  
+
+## Module 4: AWS IAM
+
+### Case Study 8: Shared Responsibility Model
+**Division:**
+- **AWS:** Physical infrastructure/network  
+- **User:** OS patches, IAM, encryption  
+**Critical Success Factor:** Proper user configuration  
+
+### Case Study 9: IAM Practice Lab
+**Activities:**
+- Created granular user groups  
+- Implemented least privilege policies  
+- Tested real-world access scenarios  
+**Outcome:** Demonstrated role-based security effectiveness  
+
+## Module 5: AWS VPC
+
+### Case Study 10: VPC Lab
+**Built:**
+- Public/Private subnets across 2 AZs  
+- Internet & NAT Gateways  
+- EC2 with HTTP access  
+**Takeaway:** Secure isolation with controlled internet access  
+
+## Module 6: AWS Lambda
+
+### Case Study 11: Serverless Automation
+**Function:** Scheduled EC2 stopper  
+**Components:**
+- Python 3.11 runtime  
+- EventBridge triggers (minutely)  
+- Minimal IAM permissions  
+**Result:** 80% cost reduction for non-production instances  
+
+## Module 7: AWS EBS
+
+### Case Study 12: EBS Lab
+**Tests Performed:**
+- Volume creation/mounting  
+- Snapshot backups  
+- Cross-reboot persistence  
+**Conclusion:** High-availability storage solution verified  
