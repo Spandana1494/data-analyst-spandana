@@ -33,6 +33,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/draw_io.png)
 **Figure-2**: _Draw.io file_
 
+---
+
 ## 🛠️ Methodology
 
 ### 🗂 Week 2 – Data Collection and Preparation
@@ -41,7 +43,6 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - **Folder Structure**: A logical folder structure was implemented in the bucket for easy data retrieval and pipeline integration.
 - **Data Upload**: The structured CSV file was uploaded, enabling subsequent steps like profiling and transformation.
 
-📷 **Add Images**:
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/VPC_configuration.png)
 **Figure-3**: _VPC Configuration_
 
@@ -77,7 +78,6 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - Cleaned CSV (user-friendly)
   - Cleaned PARQUET (system-friendly for querying)
 
-📷 **Add Images**:
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/receipe_job.png)
 **Figure-7**: _Job-Receipe_
 
@@ -86,6 +86,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/cleaned_parquet.png)
 **Figure-9**: _cleaned_parquet_
+
+---
 
 ### 📃 Week 4 – Data Cataloging and Analysis
 
@@ -118,6 +120,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/athena-query-results.png)
 **Figure-12**: _athena-query-results_
+
+---
 
 ## 📊 Descriptive Analysis Results
 
