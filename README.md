@@ -27,12 +27,11 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - `Channel`: Method through which the inquiry was made (e.g., phone, email).
 - `Number of Records`: Count of inquiries received in a given period.
 
-![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/csv.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/csv.png)
 **Figure-1**: _Sample preview of raw 3-1-1 dataset showing major columns and sample data_
 
-![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/draw_io.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/draw_io.png)
 **Figure-2**: _Draw.io file_
----
 
 ## 🛠️ Methodology
 
@@ -43,9 +42,14 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - **Data Upload**: The structured CSV file was uploaded, enabling subsequent steps like profiling and transformation.
 
 📷 **Add Images**:
-- `/images/vpc-setup.png` — _Screenshot of VPC configuration in AWS_
-- `/images/ec2-instance.png` — _EC2 instance launched under VPC_
-- `/images/s3-raw-structure.png` — _S3 bucket folder structure (raw folder)_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/VPC_configuration.png)
+**Figure-3**: _VPC Configuration_
+
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/Launching_VPC.png)
+**Figure-4**: _Launching VPC_
+
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/S3_raw_bucket.png)
+**Figure-5**: _S3 Raw Bucket_
 
 ---
 
