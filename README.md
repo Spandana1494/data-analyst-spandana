@@ -194,6 +194,9 @@ Key Observations:
 
 Conclusion: For finance operations requiring flexibility, availability, and compliance, AWS cloud infrastructure delivers significant operational advantages.
 
+**Result**: _case_study_1_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_1.png)
+
 ## Case Study 2: Cloud Deployment Models
 
 This case study explores how University Canada West (UCW) implements different AWS deployment models—Private, Public, Hybrid, and Multi-cloud—to support financial operations securely and efficiently.
@@ -208,6 +211,9 @@ Multi-Cloud leverages services from multiple providers, increasing system resili
 
 Conclusion: UCW's approach demonstrates how tailoring deployment models enhances both data security and service agility.
 
+**Result**: _case_study_2_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_2.png)
+
 ## Case Study 3: Cloud Service Models (IaaS, PaaS, SaaS)
 
 This study analyzes the use of AWS's core service models at UCW to address different requirements of the finance department.
@@ -219,6 +225,10 @@ PaaS (e.g., Elastic Beanstalk) abstracts the OS and infrastructure, allowing qui
 SaaS (e.g., QuickSight) offers plug-and-play financial software for fast analytics.
 
 Conclusion: Each model represents a tradeoff between control and convenience. UCW uses all three to balance flexibility, scalability, and data governance.
+
+**Result**: _case_study_3_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_3.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_3_2.png)
 
 ---
 
@@ -236,6 +246,9 @@ The phased migration approach included:
 - Centralizing billing via AWS Organizations.
 
 Conclusion: TCO reduction was achieved by reducing maintenance, hardware, and staffing costs. Migration helped Delaware North enhance governance and scalability.
+
+**Result**: _case_study_4_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_4.png)
 
 ## Case Study 5: AWS Pricing Calculator
 
@@ -255,6 +268,9 @@ The estimate factored in:
 
 Conclusion: This exercise enabled realistic budget forecasts while encouraging efficient cloud usage.
 
+**Result**: _case_study_5_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_5.png)
+
 ---
 
 # Module 3: AWS Global Infrastructure
@@ -271,6 +287,10 @@ Added TLS security and signed URLs
 
 Conclusion: Students experienced faster access times and better service availability with minimal latency.
 
+**Result**: _case_study_7_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_7.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_7_2.png)
+
 ---
 
 # Module 4: AWS Identity and Access Management (IAM)
@@ -285,6 +305,9 @@ User: OS patches, firewall configs, encryption, IAM policies
 
 Conclusion: Security success depends on the user's ability to configure and monitor their part of the stack.
 
+**Result**: _case_study_8_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_8.png)
+
 ## Case Study 9: IAM Practice Lab
 
 This hands-on lab involved:
@@ -294,6 +317,9 @@ This hands-on lab involved:
 - Testing real-time access
 
 Conclusion: The exercise demonstrated how IAM enforces structured, secure access based on roles.
+
+**Result**: _case_study_9_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_9.png)
 
 ---
 
@@ -309,6 +335,9 @@ This lab entailed creating a fully functional VPC with high availability:
 
 Conclusion: The lab highlighted how VPCs isolate environments while still enabling secure internet access.
 
+**Result**: _case_study_10_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_10.png)
+
 ---
 
 # Module 6: AWS Lambda
@@ -323,6 +352,9 @@ A Lambda function was built to stop EC2 instances on a schedule:
 
 Conclusion: Demonstrated serverless cost efficiency and automated resource management.
 
+**Result**: _case_study_11_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_11.png)
+
 ---
 
 # Module 7: AWS EBS
@@ -336,3 +368,6 @@ In this lab, EBS was tested for reliability and backup:
 - Demonstrated persistence across reboots
 
 Conclusion: EBS volumes offer durable, scalable storage crucial for high-availability applications.
+
+**Result**: _case_study_12_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/case_study_12.png)
