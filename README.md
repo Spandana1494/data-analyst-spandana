@@ -150,5 +150,3 @@ Use **Power BI**, **Tableau**, or **Matplotlib** to generate:
 - Adjust communication methods based on **channel usage trends**.
 
 ---
-
-> _This descriptive analysis provides valuable insights to enhance the operational efficiency of the City of Vancouver’s 3-1-1 public inquiry system._
