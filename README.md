@@ -1,7 +1,7 @@
 # 📊 Understanding Public Inquiry Patterns Using 3-1-1 Dataset (City of Vancouver)
 
 ## 📘 Project Description
-This project presents a comprehensive descriptive analysis of the 3-1-1 Inquiry Volume dataset sourced from the City of Vancouver's Open Data Portal. The analysis focuses on understanding how public inquiries related to city services are distributed over time, by department, type, and communication channel. The study zeroes in on inquiries managed by the **Real Estate & Facilities Management (REFM)** department to inform staffing, resource allocation, and service delivery planning.
+This project presents a comprehensive descriptive analysis of the 3-1-1 Inquiry Volume dataset sourced from the City of Vancouver's Open Data Portal. The analysis focuses on understanding how public inquiries related to city services are distributed over time, by department, type, and communication channel. The study focuses in on inquiries managed by the **Real Estate & Facilities Management (REFM)** department to inform staffing, resource allocation, and service delivery planning.
 
 The 3-1-1 system serves as a vital communication bridge between citizens and the municipal government. This analysis enables data-driven decisions that enhance the city's operational efficiency and public service responsiveness.
 
