@@ -30,6 +30,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/csv.png)
 **Caption**: _Sample preview of raw 3-1-1 dataset showing major columns and sample data_
 
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/draw_io.png)
+**Caption**: _Draw.io file_
 ---
 
 ## 🛠️ Methodology
