@@ -27,8 +27,7 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - `Channel`: Method through which the inquiry was made (e.g., phone, email).
 - `Number of Records`: Count of inquiries received in a given period.
 
-📷 **Add Image**:  
-`/images/dataset-preview.png`  
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/csv.png)
 **Caption**: _Sample preview of raw 3-1-1 dataset showing major columns and sample data_
 
 ---
