@@ -63,7 +63,7 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - All fields correctly typed and categorized.
   - 11 outliers in `Number_of_Records` retained to maintain data integrity.
 
-![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/S3_raw_bucket.png)
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/data_profiling.png)
 **Figure-6**: _data_profiling_
 
 #### Data Cleaning
