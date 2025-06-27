@@ -117,7 +117,7 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - Pinpointed periods with minimum and maximum demand.
 
 ![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/athena-query-results.png)
-**Figure-11**: _athena-query-results_
+**Figure-12**: _athena-query-results_
 
 ## 📊 Descriptive Analysis Results
 
@@ -165,9 +165,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
 - ✅ Documentation and detailed project report
 
 📷 **Add Images**:
-- `/images/s3-curated-user.png` — _Final user-friendly output in S3_
-- `/images/s3-curated-system.png` — _System-friendly (PARQUET) output in S3_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-user.png)
+**Figure-13**: _s3-curated-user_
 
----
-
-> _This project lays the foundation for smart city initiatives through transparent, data-informed governance._
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/s3-curated-system.png)
+**Figure-14**: _s3-curated-system_
