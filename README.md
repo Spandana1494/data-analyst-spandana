@@ -1,152 +1,171 @@
 # 📊 Understanding Public Inquiry Patterns Using 3-1-1 Dataset (City of Vancouver)
 
 ## 📘 Project Description
-This project focuses on conducting a **descriptive analysis** of public service inquiries using the **3-1-1 Inquiry Volume dataset** from the City of Vancouver Open Data Portal. The analysis identifies monthly trends and patterns in city maintenance inquiries to help optimize resource allocation and staffing for the city's 3-1-1 contact center, specifically focusing on the **Real Estate & Facilities Management (REFM)** department.
+This project presents a comprehensive descriptive analysis of the 3-1-1 Inquiry Volume dataset sourced from the City of Vancouver's Open Data Portal. The analysis focuses on understanding how public inquiries related to city services are distributed over time, by department, type, and communication channel. The study zeroes in on inquiries managed by the **Real Estate & Facilities Management (REFM)** department to inform staffing, resource allocation, and service delivery planning.
+
+The 3-1-1 system serves as a vital communication bridge between citizens and the municipal government. This analysis enables data-driven decisions that enhance the city's operational efficiency and public service responsiveness.
 
 ---
 
-## 🎯 Objective
-To analyze public inquiry patterns to:
-- Identify peak public inquiry periods.
-- Support efficient resource planning and budgeting.
-- Reveal long-term trends.
-- Provide data-driven recommendations to enhance city services.
+## 🌟 Objective
+The primary objective is to uncover key patterns and trends in public inquiries to:
+- Determine peak periods of public demand.
+- Support resource allocation and workforce planning.
+- Improve city responsiveness by forecasting trends.
+- Establish a basis for future predictive models and automated decision-making.
 
 ---
 
-## 📂 Dataset
+## 📂 Dataset Overview
 
 **Source**: City of Vancouver Open Data Portal  
-**Key Features**:
-- `Department`: Handling department for each inquiry  
-- `Request Type`: Category (e.g., maintenance, inspection)  
-- `Year and Month`: Time of inquiry  
-- `Channel`: Inquiry method (phone, email, chat, social media)  
-- `Number of Records`: Volume of inquiries  
 
-📷 _Image Suggestion_: Screenshot of the raw CSV preview showing column structure
+**Attributes Included**:
+- `Department`: The city division responsible for handling the request.
+- `Request Type`: The nature of the inquiry (e.g., maintenance, inspection).
+- `Year and Month`: Timestamp when the inquiry was logged.
+- `Channel`: Method through which the inquiry was made (e.g., phone, email).
+- `Number of Records`: Count of inquiries received in a given period.
+
+📷 **Add Image**:  
+`/images/dataset-preview.png`  
+**Caption**: _Sample preview of raw 3-1-1 dataset showing major columns and sample data_
 
 ---
 
-## 🔧 Methodology
+## 🛠️ Methodology
 
 ### 🗂 Week 2 – Data Collection and Preparation
-- Downloaded dataset and uploaded it to **Amazon S3** (`cityofvan-raw-spa`)
-- Set up AWS infrastructure:
-  - Created a **VPC** and **EC2 instance**
-  - Defined folder path:  
-    `CityOfVan/311InquiryVolume/Year=25/Quarter=Q2/Month=June/server=CVVS-Spa/CSV`
+- **Infrastructure Setup**: AWS infrastructure was established using VPC and EC2 to securely manage data flow.
+- **S3 Bucket Creation**: An S3 bucket named `cityofvan-raw-spa` was created to store raw data.
+- **Folder Structure**: A logical folder structure was implemented in the bucket for easy data retrieval and pipeline integration.
+- **Data Upload**: The structured CSV file was uploaded, enabling subsequent steps like profiling and transformation.
 
-📷 _Image Suggestions_:  
-- VPC setup  
-- EC2 instance  
-- S3 bucket structure  
-
----
-
-### 🧪 Week 3 – Data Profiling and Cleaning
-
-#### 🔍 Data Profiling
-- Used **AWS Glue DataBrew** to profile 20,000 sample rows  
-- Found 0 missing/null values; 100% valid data  
-- 11 outliers in `Number_of_Records` retained for integrity
-
-📷 _Image Suggestions_:  
-- Data profiling summary  
-- Column statistics chart  
-
-#### 🧹 Data Cleaning
-- Used Glue DataBrew recipes:
-  - Removed whitespaces
-  - Renamed columns (`Year Month → Year_Month`, `Number of Records → Number_of_Records`)
-  - Reformatted `Year_Month` as `yyyy-MM`
-  - Retained outliers
-
-📷 _Image Suggestions_:  
-- Data cleaning job  
-- Cleaned CSV + PARQUET S3 outputs  
+📷 **Add Images**:
+- `/images/vpc-setup.png` — _Screenshot of VPC configuration in AWS_
+- `/images/ec2-instance.png` — _EC2 instance launched under VPC_
+- `/images/s3-raw-structure.png` — _S3 bucket folder structure (raw folder)_
 
 ---
 
-### 🧰 Week 4 – Data Cataloging and Analysis
+### 🔬 Week 3 – Data Profiling and Cleaning
 
-#### 📚 Data Cataloging
-- Created **AWS Glue Crawler** (`cityofvan-crawler-spa`)
-- Registered schema to **Glue Data Catalog**
+#### Data Profiling
+- Conducted using **AWS Glue DataBrew**.
+- A sample of 20,000 rows was analyzed.
+- Key findings:
+  - No missing or null values.
+  - All fields correctly typed and categorized.
+  - 11 outliers in `Number_of_Records` retained to maintain data integrity.
 
-#### ⚙️ Visual ETL Pipeline
-- Created pipeline in **Glue Studio**:
-  - Split `Year_Month` into `Year` and `Month`
-  - Simplified column names
-  - Applied filters for REFM requests
-  - Added timestamps and saved to S3
+📷 **Add Image**:  
+`/images/databrew-profiling.png`  
+**Caption**: _Glue DataBrew profiling summary showing field distribution and quality_
 
-📷 _Image Suggestions_:  
-- Glue Data Catalog  
-- Glue ETL workflow  
+#### Data Cleaning
+- **Transformations Applied**:
+  - Whitespace removed from textual fields.
+  - Columns renamed for compatibility and clarity.
+  - `Year_Month` reformatted to `yyyy-MM`.
+  - Retained valid outliers to reflect real public activity spikes or declines.
 
-#### 🔎 Analysis with Amazon Athena
-- Executed SQL queries to answer:
-  - Monthly average inquiries
-  - Peak volume months
-  - Yearly totals
+- **Outputs**:
+  - Cleaned CSV (user-friendly)
+  - Cleaned PARQUET (system-friendly for querying)
 
-📷 _Image Suggestions_: Athena query output table
-
----
-
-## 📈 Descriptive Statistics
-- **Average Monthly Volume**: Calculated via SQL
-- **Peak Inquiry Month**: Identified from volume sorting
-- **Yearly Trends**: Aggregated using `GROUP BY Year`
+📷 **Add Images**:
+- `/images/databrew-recipe.png` — _Transformation steps in Glue DataBrew_
+- `/images/s3-cleaned-csv.png` — _Cleaned dataset (CSV format) in S3_
+- `/images/s3-cleaned-parquet.png` — _Cleaned dataset (PARQUET format) in S3_
 
 ---
 
-## 📊 Visual Insights (Optional)
-Use **Power BI**, **Tableau**, or **Matplotlib** to generate:
-- Line chart for monthly trends
-- Bar chart of request channels
-- Pie chart for request types
+### 📃 Week 4 – Data Cataloging and Analysis
 
-📷 _Image Suggestions_:  
-- Time-series graph  
-- Bar chart  
-- Pie chart  
+#### Data Cataloging
+- Used **AWS Glue Crawler** to register the cleaned dataset into a centralized **Glue Data Catalog**.
+- Schema including columns, types, and partitions was automatically generated.
+- Enabled discoverability and consistency in querying.
+
+📷 **Add Image**:  
+`/images/glue-catalog.png`  
+**Caption**: _Data schema auto-generated by Glue Crawler_
+
+#### Visual ETL Pipeline
+- Built using **AWS Glue Studio**.
+- Key transformations:
+  - Split `Year_Month` into separate `Year` and `Month` fields.
+  - Renamed columns (`Number_of_Records → num_records`).
+  - Applied filters to isolate REFM-specific requests.
+  - Converted year/month into integers for sorting.
+  - Appended a processing timestamp.
+
+📷 **Add Image**:  
+`/images/visual-etl-pipeline.png`  
+**Caption**: _Visual ETL flow in AWS Glue Studio_
+
+#### Athena Query Execution
+- SQL queries executed using **Amazon Athena**:
+  - Calculated average monthly inquiry volume.
+  - Identified the highest volume month.
+  - Determined total annual requests.
+  - Pinpointed periods with minimum and maximum demand.
+
+📷 **Add Image**:  
+`/images/athena-query.png`  
+**Caption**: _Athena SQL interface and query results_
 
 ---
 
-## 💡 Insights and Findings
-- Peak inquiries observed in **summer and year-end** months
-- **Email and phone** are dominant communication channels
-- REFM sees periodic spikes → suggests need for dynamic staffing
-- Long-term trends show slight fluctuation with consistent demand
+## 📊 Descriptive Analysis Results
+
+- **Total Inquiries by Year**: Revealed the workload handled annually.
+- **Average Monthly Volume**: Enabled staffing models based on mean demand.
+- **Peak Months**: Highlighted the need for extra support during summer and year-end.
+- **Channel Analysis**: Showed phone and email as dominant channels.
+- **Request Type and Department**: Validated the focus on REFM maintenance inquiries.
 
 ---
 
-## 🛠 Tools & Technologies Used
-- **AWS S3** – Storage  
-- **AWS Glue / DataBrew** – ETL and profiling  
-- **AWS Glue Catalog** – Schema registration  
-- **AWS Athena** – SQL analysis  
-- **EC2, VPC** – Infrastructure  
-- Optional: **Power BI / Tableau / Matplotlib** – Visualizations
+## 📄 Insights and Findings
+
+- **High-Demand Months**: Typically occurred in June, July, and December.
+- **Department Load**: REFM received considerable volume in maintenance-type requests.
+- **Stable Trends**: General inquiry volume was consistent year-to-year, supporting long-term planning.
+- **Outliers Valid**: Months with exceptionally low/high requests reflect realistic operational cycles and holidays.
+
+---
+
+## 🚀 Recommendations
+
+- **Dynamic Staffing**: Allocate extra staff during months with high volume.
+- **Automation**: Use chatbots or auto-responders to handle frequent inquiries.
+- **Predictive Planning**: Implement forecasting tools using historical trends.
+- **Channel Optimization**: Streamline services around preferred communication channels.
+
+---
+
+## 🛠️ Tools and Technologies Used
+
+- **Cloud Infrastructure**: AWS S3, EC2, VPC  
+- **ETL and Cleaning**: AWS Glue, Glue DataBrew  
+- **Querying and Analytics**: AWS Glue Catalog, Amazon Athena  
+- **Storage Formats**: CSV (user-readable), PARQUET (machine-readable)
 
 ---
 
 ## 📦 Deliverables
-- ✅ Cleaned dataset (CSV and PARQUET)
-- ✅ AWS ETL pipeline (Glue)
-- ✅ SQL queries and insights (Athena)
-- ✅ Full documentation and visualizations
 
-📷 _Image Suggestions_: Final curated S3 outputs (user-friendly and system folders)
+- ✅ Cleaned and structured dataset in S3 (CSV + PARQUET)  
+- ✅ AWS Glue visual ETL pipeline  
+- ✅ SQL queries and results using Athena  
+- ✅ Data catalog with searchable schema  
+- ✅ Documentation and detailed project report
 
----
-
-## 📌 Recommendations
-- Allocate **additional staff** during peak periods.
-- **Automate** common request types.
-- Implement **predictive analytics** for future planning.
-- Adjust communication methods based on **channel usage trends**.
+📷 **Add Images**:
+- `/images/s3-curated-user.png` — _Final user-friendly output in S3_
+- `/images/s3-curated-system.png` — _System-friendly (PARQUET) output in S3_
 
 ---
+
+> _This project lays the foundation for smart city initiatives through transparent, data-informed governance._
