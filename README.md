@@ -106,9 +106,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - Converted year/month into integers for sorting.
   - Appended a processing timestamp.
 
-📷 **Add Image**:  
-`/images/visual-etl-pipeline.png`  
-**Caption**: _Visual ETL flow in AWS Glue Studio_
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/visual-etl-pipeline.png)
+**Figure-11**: _visual-etl-pipeline_
 
 #### Athena Query Execution
 - SQL queries executed using **Amazon Athena**:
@@ -117,11 +116,8 @@ The primary objective is to uncover key patterns and trends in public inquiries 
   - Determined total annual requests.
   - Pinpointed periods with minimum and maximum demand.
 
-📷 **Add Image**:  
-`/images/athena-query.png`  
-**Caption**: _Athena SQL interface and query results_
-
----
+![Alt text](https://raw.githubusercontent.com/Spandana1494/data-analyst-spandana/main/images/athena-query-results.png)
+**Figure-11**: _athena-query-results_
 
 ## 📊 Descriptive Analysis Results
 
